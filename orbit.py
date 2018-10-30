@@ -1,16 +1,11 @@
 import datetime
 import math
-import os
 
 import click
 from skyfield.api import EarthSatellite, Topos, earth, load, Timescale, utc
 from dateutil import parser
 
 import concurrent.futures
-
-os.environ['HTTP_PROXY'] = 'ait.sstl.co.uk:3128'
-os.environ['HTTPS_PROXY'] = 'ait.sstl.co.uk:3128'
-os.environ['SSL_CERT_FILE'] = r'C:\Users\Terra\AppData\Roaming\pip\sstl-ca.cer'
 
 
 def return_pos(station, satellite, current_date):
